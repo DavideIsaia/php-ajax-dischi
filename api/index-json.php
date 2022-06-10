@@ -25,7 +25,21 @@
   <!-- main -->
   <main id="root">
     <div class="container">
-      <div class="row row-cols-3 row-cols-lg-6 mt-4">
+
+      <!-- filtro per genere -->
+      <section class="row row-cols-1">
+        <label class="p-3 text-center" for="filter-search">
+          Filtra per genere musicale
+          <select @change="">
+            <option value="" selected>Tutti</option>
+            <option>
+            </option>
+          </select>
+        </label>
+      </section>
+
+      <!-- corpo centrale -->
+      <section class="row row-cols-3 row-cols-lg-6 mt-4">
         <!-- ciclo v-for per chiamata axios -->
         <div 
           v-for="element in database" 
@@ -36,7 +50,7 @@
           <h3>{{ element.year }}</h3>
         </div> 
                 
-      </div>
+      </section>
     </div>    
   </main>
   <script src="./js/script.js"></script>
