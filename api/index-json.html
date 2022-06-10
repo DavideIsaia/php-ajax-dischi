@@ -30,10 +30,15 @@
       <section class="row row-cols-1">
         <label class="p-3 text-center" for="filter-search">
           Filtra per genere musicale
-          <select @change="">
+          <select 
+          @change="getAPI()"
+          v-model="genre"
+          >
             <option value="" selected>Tutti</option>
-            <option>
-            </option>
+            <option value="Rock">Rock</option>
+            <option value="Jazz">Jazz</option>
+            <option value="Pop">Pop</option>
+            <option value="Metal">Metal</option>
           </select>
         </label>
       </section>

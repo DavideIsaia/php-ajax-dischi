@@ -18,7 +18,7 @@ if (empty($genre) ){
   }
 }
 // richiamo il database e lo codifico come file .json per farlo leggere da js
-$database_json = json_encode($database);
+$database_json = json_encode($result);
 header("Content-Type: application/json");
 echo $database_json;
 ?>
