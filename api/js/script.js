@@ -1,6 +1,14 @@
-
 const app = new Vue ({
   el: "#root",
-  data: { 
+  data: {
+    database: []
+  },
+  created() {
+    axios
+      .get("http://localhost/php-ajax-dischi/api/server.php")
+      .then((resp) => {
+        this.database = resp.data;
+        console.log(resp.data);
+      });
   },
 });
